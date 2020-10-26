@@ -1,0 +1,615 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  
+  
+  
+<!--START JS SCRIPTS-->  
+<script>
+$(document).ready(function(){ 
+  $(".projects").addClass("animated slideInUp");
+  $(".intro").addClass("animated slideInUp");
+});
+</script>
+<!--END JS SCRIPTS-->  
+
+  
+  
+  
+<!--START CSS STYLE-->
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Chivo:400,400i,700,700i,900,900i|Heebo:100,300,400,700,900|Open+Sans:300,300i,400,400i,700,700i');
+
+#header{
+  position:relative;
+  background-color:#fff;
+  opacity:1;
+  z-index:20;
+  padding-bottom:5px;
+}
+
+.container{
+  max-width:950px;
+  background-color:#fff;
+  padding-left:15px;
+  padding-bottom:30px;
+}
+
+.footer{
+  padding-top:20px;
+  padding-bottom:10px;
+  color:#000;
+  font-family: 'Heebo', sans-serif;
+  font-weight:400;
+  font-size:9.5px;
+  text-align:center;
+  position: bottom;
+}
+
+h1{
+  position:relative;
+  display:inline-block;
+  margin-right:5px;
+  background-color:#fff;
+  color:#3b5cff;
+  font-family: 'Chivo', sans-serif;
+  font-weight:700;
+  font-size:64px;
+  text-shadow:-1px 1px 0 #000, -4px 4px 0 #ff0, -5px 5px 0 #000;
+  z-index:none;
+}
+
+h1 a, h1 a:hover{
+  background-color:#fff;
+  color:#3b5cff;
+  font-family: 'Chivo', sans-serif;
+  font-weight:900;
+  font-size:64px;
+  text-shadow:-1px 1px 0 #000, -4px 4px 0 #ff0, -5px 5px 0 #000;
+  text-decoration:none;
+  cursor:crosshair;
+}
+
+h3{
+  position:relative;
+  color:#000;
+  background-color:none;
+  display:inline-block;
+  font-family: 'Heebo', sans-serif;
+  font-weight:300;
+  font-size:15px;
+  -moz-transition: 2.5s, 1s;  
+  -webkit-transition: 2.5s, 1s;
+  z-index:10;
+  margin-right:15px;
+  margin-top:55px;
+}
+
+h3 a{
+  color:#000;
+  cursor:crosshair;
+  text-decoration:none;
+}
+
+h3 a:hover{
+  color:#000;
+  cursor:crosshair;
+  background-color:#ff0;
+  -moz-transition: .5s ease-in-out;  
+  -webkit-transition: .5s ease-in-out;
+  text-decoration:none;
+}
+
+.navbar{
+  background-color:#fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top:0;
+  margin-left:-40px;
+  z-index:40;
+  border: solid 1px #000;
+  border-radius:0px;
+}
+
+.menu{
+position: -webkit-sticky;
+  position: sticky;
+  top:0;
+  z-index:40;
+}
+
+.nav{
+  display:inline-block;
+  float:left;
+  margin-right:none;
+  color:#3b5cff;
+  font-family: 'Chivo', sans-serif;
+  font-weight:700;
+  font-size:28px;
+  text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
+  -moz-transition: 3s, 1.5s;  
+  -webkit-transition: 3s, 1.5s;
+  cursor:crosshair;
+}
+
+.nav a{
+  color:#3b5cff;
+  font-family: 'Chivo', sans-serif;
+  font-weight:700;
+  font-size:28px;
+  text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
+  text-decoration:none;
+  -moz-transition: 1s ease-in-out;  
+  -webkit-transition: 1s ease-in-out;
+  cursor:crosshair;
+}
+
+.nav a:hover{
+  background-color:none;
+  cursor:crosshair;
+}
+
+.nav:hover .dropdown1{
+  display:block;
+  float:none;
+}
+
+
+.toggle,
+[id^=drop] {
+	display: none;
+  color:#fff;
+  font-family: 'Chivo', sans-serif;
+  font-weight:700;
+  font-size:28px;
+  text-shadow: -3px 2px 0 #000, -4px 3px 0 #ff0;
+  -moz-transition: 3s, 1.5s;  
+  -webkit-transition: 3s, 1.5s;
+}
+
+.dropdown{
+  position:absolute;
+  width:auto;
+  display:none;
+  background-color: #fff;
+  font-family: 'Heebo', sans-serif;
+  color:#000;
+  font-weight:300;
+  font-size:14px;
+  text-shadow:none;
+}
+
+.dropdown a{
+  width:100%;
+  color: #000;
+  font-family: 'Heebo', sans-serif;
+  font-weight:300;
+  font-size:14px;
+  text-shadow:none;
+  text-decoration: none;
+  display: block;
+  padding: 5px 5px 3px 5px;
+  border-bottom: solid 1px #000;
+}
+
+.dropdown a:hover{
+  color:#000;
+  background-color:#ff0;
+}
+
+.nav:hover .dropdown{
+  display:block;
+  float:none;
+}
+
+.dropdown1{
+  position:absolute;
+  width:auto;
+  display:none;
+  background-color: #fff;
+  font-family: 'Heebo', sans-serif;
+  color:#000;
+  font-weight:300;
+  font-size:14px;
+  text-shadow:none;
+}
+
+body{
+  color:#000;
+}
+
+p{
+  margin-top:-25px;
+  font-family: 'Heebo', sans-serif;
+  font-weight:300;
+  line-height:22px;
+}
+
+p a{
+  color:#ff0;
+  background-color:#f8e83b;
+  cursor:crosshair;
+}
+
+p a:hover{
+  color:#000;
+  text-decoration:none;
+  cursor:crosshair;
+}
+
+.img{
+  width:100%;
+}
+
+.projects{
+  position:relative;
+  padding-top:75px;
+}
+
+.pimageextra{
+ margin-top:200px; 
+}
+
+.pvideoextra{
+ margin-top:200px;
+}
+
+.desc{
+  position:relative;
+  padding:15px 15px 15px 25px;
+  margin-left:4px;
+  margin-bottom:75px;
+  margin-top:35px;
+  background-color:#fff;
+  color:#000;
+  border:solid 1px #000;
+  font-family: 'Heebo', sans-serif;
+  font-weight:300;
+  box-shadow: 0px 0px 0 #000, -3px 3px 0 #ff0, -4px 4px 0 #000;
+  line-height:22px;
+}
+
+.desc a{
+  background-color:#ff0;
+  color:#000;
+  cursor:crosshair;
+}
+
+.desc a:hover{
+  background-color:#ff0;
+  color:#000;
+  text-decoration:none;
+  cursor:crosshair;
+}
+
+.intro{
+  position:relative;
+  padding:25px 25px 25px 35px;
+  margin-top:75px;
+  margin-left:7px;
+  margin-bottom:75px;
+  background-color:#fff;
+  color:#000;
+  border:solid 2px #000;
+  font-family: 'Chivo', sans-serif;
+  font-weight:400;
+  font-size:calc(11px + 1.5vw);
+  text-shadow:none;
+  box-shadow: 0px 0px 0 #000, -5px 5px 0 #ff0, -7px 7px 0 #000;
+  line-height:calc(36px + 1.5vw);
+}
+
+.arrow{
+  font-size:calc(36px + 1.5vw);
+  text-align:center;
+  padding:calc(33px + 1.5vw) 0px calc(35px + 1.5vw) 0px;
+}
+
+
+
+/*** START OF MEDIA QUERIES!!!! ***/
+@media screen and (min-width: 1280px) {
+  
+  .intro{
+    font-size: 30px;
+    line-height:55px;
+  }
+
+  .desc{ 
+  }
+
+}
+
+
+@media only screen and (max-width:768px){
+  .dropdown1 a{
+  width:100%;
+  color: #000;
+  font-family: 'Heebo', sans-serif;
+  font-weight:300;
+  font-size:14px;
+  text-shadow:none;
+  text-decoration: none;
+  display: block;
+  padding-top:5px;
+  padding-bottom:5px;
+  border-bottom: solid 1px #000;
+}
+
+.dropdown1 a:hover{
+  color:#000;
+  background-color:#ff0;
+}
+  
+  .nav{
+    width:100%;
+    float:left;
+    margin-left:none;
+    position:relative;
+  }
+ 
+  .navbar{
+    position:relative;
+    margin-left:none;
+  }
+  
+ .nav:hover .dropdown{
+  display:none;
+}
+  	/* Hide the navigation menu by default */
+	/* Also hide the  */
+	.toggle + a, .menu{
+    position: -webkit-sticky;
+    position: sticky;
+    top:40px;
+    display:none;
+    color:#3b5cff;
+    font-family: 'Chivo', sans-serif;
+    font-weight:700;
+    font-size:28px;
+    text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
+    -moz-transition: 3s, 1.5s;  
+    -webkit-transition: 3s, 1.5s;
+    z-index:40;
+    cursor:crosshair;
+	}
+
+  .dropdown1{
+   position:relative;
+    display:none;
+    color:#000;
+    font-family: 'Heebo', sans-serif;
+    font-weight:300;
+    font-size:14px;
+    -moz-transition: 3s, 1.5s;  
+    -webkit-transition: 3s, 1.5s;
+    z-index:30;
+	}
+  
+  
+	/* Styling the toggle lable */
+	.toggle {
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    padding-left:10px;
+		display: block;
+    background-color:#fff;
+    opacity:1;
+    color:#3b5cff;
+    font-family: 'Chivo', sans-serif;
+    font-weight:700;
+    font-size:28px;
+    text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
+    border:solid 1px #000;
+    -moz-transition: 3s, 1.5s;  
+    -webkit-transition: 3s, 1.5s; 
+    z-index:40;
+    cursor:crosshair;
+	}
+  
+  .toggle2{
+    position: relative;
+    padding-left:0;
+    border:none;
+    z-index:30;
+	}
+
+	.toggle:hover {
+		
+	}
+
+	/* Display Dropdown when clicked on Parent Lable */
+	[id^=drop]:checked + ul {
+		display:block;
+    float:none;
+    z-index:30;
+    transition: 3s ease-in-out;
+	}
+  
+[id^=drop]:checked + .dropdown1 {
+		display:block;
+    float:none;
+    z-index:30;
+	}
+}
+
+/*** END OF MEDIA QUERIES!!!! ***/
+</style>
+<!--END CSS STYLE-->
+	
+
+<title>the jieuuniverse</title>
+</head>
+	
+  
+  
+	
+	
+	
+  
+  
+<!--START HTML CODE-->
+<div class="container">
+<div id="header">
+  <h1 class="animated swing"><a href="/">안녕,</a></h1>
+  
+  </div>
+ 
+<label for="drop" class="toggle">menu</label>
+        <input type="checkbox" id="drop" />
+            <ul class="menu">
+  <div class="navbar">
+  <div class="nav">
+    <label for="drop-1" class="toggle toggle2">2d</label>
+    <a class="toggle2">2d</a>
+    <input type="checkbox" id="drop-1" />
+      <div class="dropdown dropdown1">
+    <a href="/light">light project</a>
+    <a href="/">drawing</a>
+    <a href="/">illustration</a>
+    <a href="/">recycled photography</a>
+   </div>
+   </div>   
+      
+   <div class="nav">
+     <label for="drop-2" class="toggle toggle2">3d</label>
+      <a class="toggle2">3d</a>
+     <input type="checkbox" id="drop-2" />
+   <div class="dropdown dropdown1">
+    <a href="/holyshit">holy sh*t!</a>
+    <a href="/">a breath of fresh air</a>
+    <a href="/">wearables</a>
+    <a href="/">food series</a>
+   </div>
+   </div>
+      
+    <div class="nav">
+      <label for="drop-3" class="toggle toggle2">print</label>
+      <a class="toggle2">print</a>
+      <input type="checkbox" id="drop-3" />
+      <div class="dropdown dropdown1">
+    <a href="/vbr">vb&r</a>
+    <a href="/typography">typography</a>
+    <a href="/layout">publication layout</a>
+    <a href="/">artist services</a>
+    <a href="/">dérive</a>
+   </div>
+   </div>
+    <div class="nav">
+      <label for="drop-4" class="toggle toggle2">motion</label>
+      <a class="toggle2">motion</a>
+      <input type="checkbox" id="drop-4" />
+      <div class="dropdown dropdown1">
+    <a href="/fairlyoddparents">the fairly odd parents</a>
+    <a href="/salad">how to make a salad</a>
+    <a href="/kinetic">kinetic typography</a>
+   </div>
+   </div>
+    
+   <!-- save for web design/ux/ui stuff
+
+    <div class="nav">
+      <label for="drop-5" class="toggle toggle2">misc</label>
+      <a href="#">misc</a>
+      <input type="checkbox" id="drop-5" />
+      <div class="dropdown dropdown1">
+     <a href="/">project name will be here</a>
+    <a href="/">Link 2</a>
+    <a href="/">Link 3</a>
+   </div>
+   </div>
+
+ -->
+    
+    
+    
+  <div class="nav">
+    <a href="/about">a.</a>
+    <!--
+      <div class="dropdown">
+     <a href="/">project name will be here</a>
+    <a href="/">Link 2</a>
+    <a href="/">Link 3</a>
+   </div>
+-->
+   </div>
+      </div>
+  </ul>
+  
+  <center>
+    <h3>↯ <a href="#1">mmm magazine</a></h3> <h3>↯ <a href="#2">experimental</a></h3> <h3>↯ <a href="#3">titanian yearbook</a></h3> 
+  </center>
+  
+<div class="projects"> 
+  <div class="pimage" id="1">
+  <img class="img-responsive" src="https://images2.imgbox.com/88/7d/KxX6BGsB_o.jpg">
+    <br/>
+  <img class="img-responsive" src="https://images2.imgbox.com/8c/a4/fIDNrouF_o.jpg">
+    <br/>
+  <img class="img-responsive" src="https://images2.imgbox.com/ea/f3/HAAM4MXJ_o.jpg">
+  </div>
+ 
+ <div class="desc">
+   <b>specs:</b> <i>mmm</i> music magazine with double-spread feature story on singer-songwriter iu!
+   <br/>
+   <b>completed:</b> 2015.
+    </div>
+	
+  <div class="pimageextra" id="2">
+  <img class="img-responsive" src="https://images2.imgbox.com/3d/2f/wDjzWtaQ_o.jpg">
+  </div>
+ 
+ <div class="desc">
+   <b>specs:</b> self-initiated experimental layout designs.
+   <br/>
+   <b>completed:</b> ongoing.
+    </div>
+  
+  <div class="pimageextra" id="3">
+  <img class="img-responsive" src="https://images2.imgbox.com/e8/a5/ess5Qyjo_o.jpg">
+    <br/>
+  <img class="img-responsive" src="https://images2.imgbox.com/be/07/8ARnlOja_o.jpg">
+    <br/>
+  <img class="img-responsive" src="https://images2.imgbox.com/b5/52/dAkbC6AT_o.jpg">
+    <br/>
+  <img class="img-responsive" src="https://images2.imgbox.com/3c/d5/58jpf1PM_o.jpg">
+    <br/>
+  <img class="img-responsive" src="https://images2.imgbox.com/70/ca/Qs9LJCBy_o.jpg">
+    <br/>
+  <img class="img-responsive" src="https://images2.imgbox.com/2f/2f/gUW9Fd1r_o.jpg">
+    <br/>    
+  <img class="img-responsive" src="https://images2.imgbox.com/e6/4d/zT0JdWwN_o.jpg">
+    <br/>
+  <img class="img-responsive" src="https://images2.imgbox.com/21/1b/dR3bNLHr_o.jpg">
+    <br/>   
+  <img class="img-responsive" src="https://images2.imgbox.com/82/b3/QXdYXcWp_o.jpg">
+    <br/>   
+  <img class="img-responsive" src="https://images2.imgbox.com/0a/6c/wuIy6b3a_o.jpg"> 
+  </div>
+ 
+ <div class="desc">
+   <b>specs:</b> 350+ page san marino high school <i>titanian</i> yearbook publication (vol. 59) with the theme of 'titans a to z.' by orginizing the book in an umbrella coverage format based off of alphabetical words, the goal of this publication was to capture the essence of what it means to be a titan. 
+   <br/>
+   <b>completed:</b> 2012.
+    </div>
+ 
+  </div>
+  </div>
+
+  
+  <div class="footer">
+    &copy; 2018 made in the jieuuniverse
+  </div>
+</html>
+<!--END HTML CODE-->
+

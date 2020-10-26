@@ -1,0 +1,431 @@
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  
+  
+  
+<!--START JS SCRIPTS-->  
+<script>
+$(document).ready(function(){ 
+  $(".projects").addClass("animated slideInUp");
+  $(".intro").addClass("animated slideInUp");
+  $(".grid").addClass("animated slideInUp");
+  $(".about").addClass("animated slideInUp");
+});
+</script>
+<!--END JS SCRIPTS-->  
+
+  
+  
+  
+<!--START CSS STYLE-->
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i|Shrikhand');
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-weight:300;
+  color:#000;
+}
+
+body a{
+  cursor:crosshair;
+}
+
+.col-md-7{
+ padding-top:10px; 
+}
+
+.about{
+  position:relative;
+  margin: auto;
+  padding:25px 15px 25px 15px;
+  margin-top:75px;
+  margin-bottom:75px;
+  background-color:#ffffdd;
+  color:#000;
+  border:solid 1px #000;
+  font-family: 'Roboto', sans-serif;
+  font-weight:300;
+  font-size:16px;
+  line-height:26px;
+}
+
+#header{
+  position:relative;
+  background-color:#fff;
+  opacity:1;
+  z-index:20;
+  padding-bottom:0px;
+}
+
+.container{
+  max-width:950px;
+  background-color:#fff;
+  padding-left:15px;
+  padding-bottom:30px;
+}
+
+.grid{
+  margin-top:7%;
+}
+
+.img-grid{
+  width:100%;
+  padding-bottom:12%;
+}
+
+.footer{
+  padding-top:20px;
+  padding-bottom:10px;
+  color:#000;
+  font-family: 'Roboto', sans-serif;
+  font-weight:400i;
+  font-size:9.5px;
+  text-align:center;
+  position: bottom;
+}
+
+h1{
+  position:relative;
+  display:inline-block;
+  margin-right:5px;
+  background-color:none;
+  color:#fff;
+  font-family: 'Shrikhand';
+  font-weight:400;
+  font-size:64px;
+  z-index:none;
+}
+
+h1 a, h1 a:hover{
+  background-color:none;
+  color:#fff;
+  font-family: 'Shrikhand';
+  font-weight:400;
+  font-size:64px;
+  -webkit-text-stroke: 1.25px black;
+  text-shadow:-2px 2px 0 #000, -3px 3px 0 #ff0, -4px 4px 0 #000;
+  text-decoration:none;
+}
+
+.navbar{
+  background-color:none;
+  position: -webkit-sticky;
+  position: sticky;
+  top:0;
+  margin-left:-40px;
+  z-index:40;
+  border-top: solid 1px #000;
+  padding-top:15px;
+  border-radius:0px;
+}
+
+.menu{
+position: -webkit-sticky;
+  position: sticky;
+  top:0;
+  z-index:40;
+}
+
+.nav{
+  display:inline-block;
+  float:left;
+  margin-right:none;
+  -moz-transition: 3s, 1.5s;  
+  -webkit-transition: 3s, 1.5s;
+}
+
+.nav a{
+  color:#fff;
+  font-family: 'Shrikhand', sans-serif;
+  font-weight:700;
+  font-size:28px;
+  text-decoration:none;
+  -webkit-text-stroke: .25px black;
+  text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
+  -moz-transition: 1s ease-in-out;  
+  -webkit-transition: 1s ease-in-out;
+}
+
+.nav a:hover{
+  background-color:none;
+}
+
+.nav:hover .dropdown1{
+  display:block;
+  float:none;
+}
+
+
+.toggle,
+[id^=drop] {
+	display: none;
+  color:#fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight:400;
+  font-size:28px;
+  text-shadow: -3px 2px 0 #000, -4px 3px 0 #ff0;
+  -moz-transition: 3s, 1.5s;  
+  -webkit-transition: 3s, 1.5s;
+}
+
+.nav:hover .dropdown{
+  display:block;
+  float:none;
+}
+
+p{
+  margin-top:-25px;
+  font-family: 'Roboto', sans-serif;
+  font-weight:300;
+  line-height:22px;
+}
+
+p a{
+  color:#ff0;
+  background-color:#f8e83b;
+}
+
+p a:hover{
+  color:#000;
+  text-decoration:none;
+}
+
+.projects{
+  position:relative;
+  margin-top:7%;
+}
+
+.pimageextra{
+ margin-top:200px; 
+}
+
+.pvideoextra{
+ margin-top:200px;
+}
+
+.desc{
+  position:relative;
+  margin-bottom:75px;
+  margin-top:35px;
+  background-color:#fff;
+  color:#000;
+  border-left:none;
+  font-family: 'Roboto', sans-serif;
+  font-weight:300;
+  font-size:14px;
+  line-height:24px;
+}
+
+.desc a{
+  background-color:#ff0;
+  color:#000;
+}
+
+.desc a:hover{
+  background-color:#ff0;
+  color:#000;
+  text-decoration:none;
+}
+
+.intro{
+  position:relative;
+  max-width:550px;
+  margin: auto;
+  padding:25px 20px 20px 30px;
+  margin-top:75px;
+  margin-bottom:75px;
+  background-color:#ffffdd;
+  color:#000;
+  border:solid 1px #000;
+  font-family: 'Roboto', sans-serif;
+  font-weight:300;
+  font-size:18px;
+  text-shadow:none;
+  line-height:34px;
+}
+
+.arrow{
+  font-size:34px;
+  text-align:center;
+  font-family: 'Roboto', sans-serif;
+  font-weight:300;
+  padding:10%;
+}
+
+
+
+/*** START OF MEDIA QUERIES!!!! ***/
+@media screen and (min-width: 1280px) {
+}
+
+@media only screen and (max-width:990px){
+}  
+
+@media only screen and (max-width:768px){
+  .col-md-7{
+    padding-top:35px;
+  }
+  
+  .nav{
+    width:100%;
+    float:left;
+    margin-left:none;
+    position:relative;
+  }
+ 
+  .navbar{
+    position:relative;
+    margin-left:none;
+    border:none;
+  }
+  
+ .nav:hover .dropdown{
+  display:none;
+}
+  	/* Hide the navigation menu by default */
+	/* Also hide the  */
+	.toggle + a, .menu{
+    position: -webkit-sticky;
+    position: sticky;
+    top:40px;
+    display:none;
+    color:#3b5cff;
+    font-family: 'Roboto', sans-serif;
+    font-weight:700;
+    font-size:28px;
+    text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
+    -moz-transition: 3s, 1.5s;  
+    -webkit-transition: 3s, 1.5s;
+    z-index:40;
+	}
+  
+  .menu{
+    margin-top:-20px;
+  }
+  
+	/* Styling the toggle lable */
+	.toggle {
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    padding-left:10px;
+		display: block;
+    background-color:none;
+    opacity:1;
+    color:#fff;
+    font-family: 'Shrikhand', sans-serif;
+    font-size:42px;
+    -webkit-text-stroke: .75px black;
+    text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
+    border-top:solid 1px #000;
+     text-decoration:none;
+    -moz-transition: 3s, 1.5s;  
+    -webkit-transition: 3s, 1.5s; 
+    z-index:40;
+	}
+  
+
+	.toggle:hover {
+		
+	}
+
+	/* Display Dropdown when clicked on Parent Lable */
+	[id^=drop]:checked + ul {
+		display:block;
+    float:none;
+    z-index:30;
+    transition: 3s ease-in-out;
+	}
+  
+[id^=drop]:checked + .dropdown1 {
+		display:block;
+    float:none;
+    z-index:30;
+	}
+}
+
+/*** END OF MEDIA QUERIES!!!! ***/
+</style>
+<!--END CSS STYLE-->
+	
+
+<title>the jieuuniverse</title>
+</head>
+	
+  
+  
+<!--START HTML CODE-->
+<body>
+<div class="container">
+<div id="header">
+  <h1 class="animated swing"><a href="/">= o<span style="font-size:58px;"><sup>2</sup></span></a></h1>
+  
+  </div>
+ 
+<label for="drop" class="toggle">↯</label>
+        <input type="checkbox" id="drop" />
+            <ul class="menu">
+  <div class="navbar">
+  
+    <div class="nav">
+    <a href="/work">work</a>
+   </div>   
+ 
+   <div class="nav">
+    <a href="https://drive.google.com/uc?export=download&id=18qha6BRpmLt8hfEQBn4tLbYlohSivnlc" download>resume</a>
+   </div>
+    
+  <div class="nav">
+    <a href="/about">about</a>
+   </div>
+      </div>
+  </ul>
+ 
+<!--
+  <center>
+    <h3>↯ <a href="#1">fuck [blank]</a></h3>  <h3>↯ <a href="#2">lithography</a></h3>
+  </center>
+-->
+  
+<div class="projects">
+  <div class="pimage" id="1">
+  <img class="img-responsive" style="margin:auto;" src="https://images2.imgbox.com/88/7d/KxX6BGsB_o.jpg">
+   <div class="desc">
+<i>Mmm</i> is a mini semi-monthly music magazine that features one influential artist per issue to give full coverage and ensure high quality of content. <i>Mmm</i> goes through an intensive screening process that requires thorough research and extensive knowledge of the Korean music industry before selecting the artists of the month.
+     <br/><br/>
+As an all-inclusive publication, <i>Mmm</i> features artists from all music genres and statuses. Whether underground or internationally recognized, <i>Mmm</i>'s primary goal is to recognize talents who all share one thing in common: their genuine love for music.
+ <div class="arrow">↯</div>
+    </div>
+    
+  <img class="img-responsive" style="margin:auto;" src="https://images2.imgbox.com/8c/a4/fIDNrouF_o.jpg">
+   <br/><br/> 
+  <img class="img-responsive" style="margin:auto;" src="https://images2.imgbox.com/ea/f3/HAAM4MXJ_o.jpg">
+    
+    <div class="desc">
+A sneak peek of the November issue with singer-songwriter IU!
+    </div>
+    </div>
+ 
+  </div>
+  </div>
+
+  
+  <div class="footer">
+    &copy; 2018 made in the jieuuniverse
+  </div>
+  </body>
+</html>
+<!--END HTML CODE-->
